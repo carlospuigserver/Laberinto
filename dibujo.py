@@ -19,33 +19,48 @@ class pen(turtle.Turtle):
         self.speed(0) #para que se pueda ver como se va dibujamdo
     
 
+
+#Creamos una clase para definir un jugador, la cual será una subclase del módulo turtle, y la inicializamos
+
+class Player(turtle.Turtle):
+    def __init__(self):
+        turtle.Turtle.__init__(self)  
+        self.shape("circle")
+        self.color("yellow")
+        self.penup()  
+        self.speed(0) 
+    
+
+
 niveles=[]
 #definir nivel
 nivel_1=[
-    "XXXXXXXXXXXXXXXXXXXXXXXXX",
-    "XXXXXXXXXXXXXXXXXXXXXXXXX",
-    "XXXXXXXXXXXXXXXXXXXXXXXXX",
-    "XXXXXXXXXXXXXXXXXXXXXXXXX",
-    "XXXXXXXXXX       XXXXXXXX",
-    "XXXXXXXXXXXXXXXXXXXXXXXXX",
-    "XXXXXXXXXXXXXXXXXXXXXXXXX",
-    "XXXXXXXXXXXXXXXXXXXXXXXXX",
-    "XXXXXXXXXXXXXXXXXXXXXXXXX",
-    "XXXXXXXXXXXXXXXXXXXXXXXXX",
-    "XXXXXXXXXXXXXXXXXXXXXXXXX",
-    "XXXX             XXXXXXXX",
-    "XXXXXXXXXXXXXXXXXXXXXXXXX",
-    "XXXXXXXXXXXXXXXXXXXXXXXXX",
-    "XXXXXXXXXXXXXXXXXXXXXXXXX",
-    "XXXXXXXXXXXXXXXXXXXXXXXXX",
-    "XXXXXXXXXXXXXXXXXXXXXXXXX",
-    "XXXXXXXXXXXXXXXXXXXXXXXXX",
-    "XXXXXXXXXXXXXXXXXXXXXXXXX",
-    "XXXXXXXXXXXXXXXXXXXXXXXXX",
-    "XXXXXXXXXXXXXXXXXXXXXXXXX",
-    "XXXXXXXXXXXXXXXXXXXXXXXXX",
-    "XXXXXXXXXXXXXXXXXXXXXXXXX",
-    "XXXXXXXXXXXXXXXXXXXXXXXXX",
+ 
+"XXXXXXXXXXXXXXXXXXXXXXXXX",
+"XXX P                  XX",
+"XXX      XXXXXXX   XXXXXX",
+"XXX      XXX        XXXXX",
+"XXX      XXX    XXXXXXXXX",
+"XXX      XXX    XXXXXXXXX",
+"XXX  XXXXXXX    XXXXXXXXX",
+"XXX  XXXXXXX     XXXXXXXX",
+"XXX  XXXXXXX    XXXXXXXXX",
+"XXX  XXXXXXXXX        XXX",
+"XXX  XXXXXXXXX        XXX",
+"XXX  XXXXXXXXX    XXXXXXX",
+"XXX  XXXXXXXXX    XXXXXXX",
+"XXX  XXXXXXXXX    XXXXXXX",
+"XXX  XXXXXXXXX    XXXXXXX",
+"XXX  XXXXXXXXX    XXXXXXX",
+"XXX  XXXXXXXXX     XXXXXX",
+"XXX  XXXXXXXXX     XXXXXX",
+"XXX  XXXXXXXXX        XXX",
+"XXX  XXXXXXXXXXXXXX   XXX",
+"XXX                   XXX",
+"XXX  XXXXXXXXXXXXXX   XXX",
+"XXX  XXXXXXXXXXXXXX   XXX",
+"XXXXXXXXXXXXXXXXXXXXXXXXX",
+
     
 ]
 niveles.append(nivel_1)
@@ -61,9 +76,13 @@ def iniciar_lab(nivel):
                 if letra_x=="X":
                     pen.goto(screen_x,screen_y)
                     pen.stamp()
-                
+                if letra_x=="P":
+                    player.goto(screen_x,screen_y)
+                    
                     
 
-pen = pen()
+pen = pen() #creamos la instancia
+player = Player() #creamos la instancia
                                                     
 iniciar_lab(niveles[0])
+
