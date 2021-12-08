@@ -28,10 +28,20 @@ class Player(turtle.Turtle):
         self.shape("circle")
         self.color("yellow")
         self.penup()  
-        self.speed(0) 
+        self.speed(0)
+        self.goto(0,0) 
+        self.direction="stop"
+
+
+
+
+
+
+
     
+        
 
-
+            
 niveles=[]
 #definir nivel
 nivel_1=[
@@ -59,7 +69,7 @@ nivel_1=[
 "XXX                   XXX",
 "XXX  XXXXXXXXXXXXXX   XXX",
 "XXX  XXXXXXXXXXXXXX   XXX",
-"XXXXXXXXXXXXXXXXXXXXXXXXX",
+"XXXXXXXXXXXXXXXXXXXXX XXX",
 
     
 ]
@@ -78,6 +88,46 @@ def iniciar_lab(nivel):
                     pen.stamp()
                 if letra_x=="P":
                     player.goto(screen_x,screen_y)
+            
+            
+            
+            # Aquí estoy creando una secuancia para los movimientos
+            while letra_x=="P":
+                direccion="arriba" or "abajo" or "izquierda" or "derecha".format(direccion)
+                if direccion=="arriba":
+                    x=x
+                    y=y+1
+                if direccion=="abajo":
+                    x=x
+                    y=y-1
+                if direccion=="izquierda":
+                    x=x-1
+                    y=y
+                if direccion=="derecha":
+                    x=x+1
+                    y=y    
+
+
+
+
+
+
+
+
+                
+                
+
+
+        
+
+
+                
+
+
+
+                  
+
+                    
                     
                     
 
