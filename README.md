@@ -9,6 +9,8 @@ El diagrama de flujo relacionado con el programa es el siguiente:
 
 
 
+<img width="920" alt="laberinto" src="https://user-images.githubusercontent.com/91721643/145230282-9a0c6e29-8d59-4a21-90eb-ccd0459b9613.png">
+
 
 
 
