@@ -19,9 +19,9 @@ De todas maneras, aquí te adjunto el link por si no se ve del todo bien la imag
 
 El código que he elaborado para poder realizar este programa es el siguiente:
 
-# Utilizamos módulo turtle para crear aplicaciones gráficas
+```# Utilizamos módulo turtle para crear aplicaciones gráficas
 
-```import turtle
+import turtle
 
 # Ahora crearemos una ventana, la cual tendrá un color, un título y unas ciertas dimensiones
 ventana=turtle.Screen()
