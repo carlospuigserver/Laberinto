@@ -2,7 +2,7 @@
 
 import turtle
 
-# Ahora crearemos una ventana, la cual tendrá un color, un título y unas ciertas dimensiones
+# Ahora TE HE REVISADO EL CÓDIGO, la cual tendrá un color, un título y unas ciertas dimensiones
 ventana=turtle.Screen()
 ventana=turtle.bgcolor("black")
 ventana=turtle.title("Laberinto")
